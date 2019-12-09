@@ -1,4 +1,4 @@
-# Setting up Mu Editor on Ubuntu 16.04
+# Setting up Mu Editor on Ubuntu
 
 In our workshop, students will be using laptops loaded with Ubuntu 16.04.
 
@@ -6,14 +6,21 @@ Here is a procedure to add the Mu Editor to this environment:
 
     sudo apt install python3-pip3
     pip3 install mu-editor
+    
+For Ubuntu 16.04, you'll need to downlevel iPython with the following:
+
     pip3 uninstall ipython
     pip3 install ipython==7.9.0
 
 At this point, Mu Editor should be installed and working.
 
-To test, run: mu-editor
+To test, run:
 
-Next, to add an icon to the launcher, do:
+    mu-editor
+
+# Adding Mu Editor to Gnome Desktop
+
+To add an icon to the launcher, do:
 
     cd ~/.local/share/applications
     wget https://raw.githubusercontent.com/mu-editor/mu/master/conf/mu.codewith.editor.desktop
@@ -21,13 +28,11 @@ Next, to add an icon to the launcher, do:
     cd ../icons
     wget https://raw.githubusercontent.com/mu-editor/mu/master/conf/mu.codewith.editor.png
 
-Select "Search your computer" in the launcher. (That's the top-most Ubuntu icon.)
+Finally:
 
-Search for: mu
-
-Launch it.
-
-The application should launch and the "mu" icon should appear in the launcher.
-
-Right-click the launcher and select "Lock to launcher."
+* Select "Search your computer" in the launcher.
+* Search for: mu
+* Launch it.
+* The application should launch and the "mu" icon should appear in the launcher dock.
+* Right-click the icon in the launcher dock and select "Lock to launcher."
 
